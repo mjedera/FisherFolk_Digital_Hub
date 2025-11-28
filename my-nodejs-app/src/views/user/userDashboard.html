@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicant Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/userProfile.css">
+</head>
+<body>
+    <div id="sidebarOverlay"></div>
+    <div id="messageBox" class="message-box"></div>
+
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <img src="/images/5.png" alt="" class="logo rounded-5">
+            <div class="brand-text">FISHERFOLKS</div>
+        </div>
+        <ul class="list-unstyled components">
+            <li class="active">
+                <a href="#" id="getTags"><i class="fa fa-home nav-icon"></i><span class="nav-text">Home</span></a>
+                <a href="#" id="getDashboard"><i class="fa fa-desktop nav-icon"></i><span class="nav-text">Dashboard</span></a>
+                <a href="#" id="getApplicants"><i class="fa fa-user nav-icon"></i><span class="nav-text">Applicants</span></a>
+                
+                
+            </li>
+            <li><a href="#"><i class="fa fa-info-circle nav-icon"></i><span class="nav-text">Registered </span></a></li>
+            <li>
+                <a href="#pageSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fa fa-file nav-icon"></i><span class="nav-text">Pages</span>
+                </a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li><a href="#"><i class="fa fa-circle nav-icon"></i><span class="nav-text">Page 1</span></a></li>
+                    <li><a href="#"><i class="fa fa-circle nav-icon"></i><span class="nav-text">Page 2</span></a></li>
+                    <li><a href="#"><i class="fa fa-circle nav-icon"></i><span class="nav-text">Page 3</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#" id="getHandbook"><i class="fa fa-briefcase nav-icon"></i><span class="nav-text">Handbook</span></a></li>
+            <li><a href="#"><i class="fa fa-phone nav-icon"></i><span class="nav-text">Contact</span></a></li>
+        </ul>
+        
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light  shadow">
+        <div class="container-fluid">
+            <button title="" type="button" id="sidebarCollapse" class="btn btn-primary btn-sm">
+                <i class="fas fa-align-left"></i>
+            </button>
+            <span class="ms-2 fw-bold ">Dashboard</span>
+        </div>
+    </nav>
+
+    <div id="content">
+        <div class="container-fluid mt-4">
+            <div class="text-center p-5">
+                <h3>Welcome to the Applicant Dashboard</h3>
+                <p class="text-muted">You can manage content or navigate using the sidebar.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/userDashboard.js"></script>
+
+</html>

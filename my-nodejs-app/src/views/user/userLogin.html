@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles for Modern and Minimalist Look */
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            padding: 20px; /* Add padding to body for extra small screens */
+            box-sizing: border-box;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px; /* Max width for desktop/tablet */
+            text-align: center;
+            box-sizing: border-box;
+            transition: padding 0.3s ease; /* Smooth transition for padding on resize */
+        }
+
+        .login-container h2 {
+            margin-bottom: 30px;
+            color: #333;
+            font-weight: 600;
+            font-size: 1.8em;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            color: #555;
+            font-weight: 400;
+        }
+
+        .input-group input[type="text"],
+        .input-group input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            color: #333;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-group input[type="text"]:focus,
+        .input-group input[type="password"]:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 14px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+            margin-top: 20px;
+        }
+
+        .login-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-1px);
+        }
+
+        .forgot-password {
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .forgot-password a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-password a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        
+        /* --- RESPONSIVENESS (Media Query) --- */
+        /* Targets devices smaller than 480px (typical small phone screen width) */
+        @media (max-width: 480px) {
+            .login-container {
+                /* Reduce padding on very small screens to maximize form size */
+                padding: 30px 20px; 
+                /* Remove the box shadow for a cleaner, full-screen mobile look */
+                box-shadow: none; 
+                border-radius: 0; /* Remove border radius for full-width effect */
+                max-width: 100%; /* Take up full available width on mobile */
+                height: 100vh; /* Take up full height on mobile */
+                display: flex;
+                flex-direction: column;
+                justify-content: center; /* Center content vertically in the full screen */
+            }
+
+            .login-container h2 {
+                margin-top: 0; /* Adjust heading margin for top of screen */
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Welcome Back</h2>
+        <form action="/userLogin" method="POST">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="login-button">Login</button>
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
